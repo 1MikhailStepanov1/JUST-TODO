@@ -8,6 +8,7 @@ CREATE TABLE lists
 (
     id      integer PRIMARY KEY,
     name    varchar(31) NOT NULL,
+    priority priority,
     user_id integer     NOT NULL REFERENCES users ON DELETE RESTRICT
 );
 CREATE TYPE status AS ENUM ('To Do', 'In progress', 'Completed');
