@@ -1,5 +1,6 @@
 package english.todo.messages;
 
+import english.todo.entity.enums.Priority;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
@@ -13,8 +14,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TaskResp {
-    enum Priority {EXTREMELY_HIGH, HIGH, AVERAGE, LOW, EXTREMELY_LOW}
-
     @NotEmpty
     private String name;
 
@@ -23,6 +22,4 @@ public class TaskResp {
     private Instant deadline;
 
     private Priority priority;
-
-    private List<String> tags;
 }

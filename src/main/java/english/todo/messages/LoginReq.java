@@ -21,10 +21,10 @@ public class LoginReq {
     private String login;
 
     @NotEmpty(message = "Password is required")
-    @Pattern(regexp = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}$",
-            message = "Password doesn't meet all requirements ")
-    @Size(min = 8, message = "password should have at least 8 characters")
+//    @Pattern(regexp = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}$",
+//            message = "Password doesn't meet all requirements ")
+//    @Size(min = 8, message = "password should have at least 8 characters")
     @Schema
-    private String password;
+    private char[] password;
 
 }
